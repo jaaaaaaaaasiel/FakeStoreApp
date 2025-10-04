@@ -31,6 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 @Composable
 fun HomeScreen(nav: NavController){
     var products by remember { mutableStateOf(listOf<ProductModel>()) }
+    var banner by remember { mutableStateOf(products.random()) }
     var loading by remember { mutableStateOf(true) }
 
     LaunchedEffect(true) {
