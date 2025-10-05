@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                         }
                         composable<ProductDetailScreenRoute> { backStack ->
                             val args = backStack.toRoute<ProductDetailScreenRoute>()
-                            ProductDetailScreen(args.id)
+                            ProductDetailScreen(args.id, nav)
                         }
                     }
                 }
