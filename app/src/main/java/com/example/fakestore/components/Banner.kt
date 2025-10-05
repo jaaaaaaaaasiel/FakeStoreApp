@@ -25,12 +25,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import com.example.fakestore.models.PMPrueba
+import com.example.fakestore.models.ProductModel
 import com.example.fakestore.ui.theme.ButtonBanner
 import com.example.fakestore.ui.theme.TextColor
 
 @Composable
-fun Banner(banner: PMPrueba){
+fun Banner(banner: ProductModel){
     Row(modifier = Modifier
         .fillMaxWidth()
         .padding(horizontal = 35.dp, vertical = 15.dp)
