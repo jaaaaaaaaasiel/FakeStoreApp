@@ -6,9 +6,9 @@ import androidx.compose.ui.Modifier
 import com.example.fakestore.models.ProductModel
 
 @Composable
-fun Header(mod: Modifier, banner: ProductModel){
+fun Header(mod: Modifier, banner: ProductModel, onClick: () -> Unit){
     Column(modifier = mod) {
         NavBar{}
-        Banner(banner)
+        Banner(banner, onCLick = onClick)
     }
 }

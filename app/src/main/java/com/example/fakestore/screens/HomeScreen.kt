@@ -93,7 +93,9 @@ fun HomeScreen(nav: NavController){
                 .padding(start = 5.dp)
                 .fillMaxWidth()
                 .background(Background)
-                .weight(3f), banner)
+                .weight(3f), banner){
+                nav.navigate(ProductDetailScreenRoute(banner.id))
+            }
 
             Row(modifier = Modifier
                 .padding(horizontal = 10.dp, vertical = 10.dp)

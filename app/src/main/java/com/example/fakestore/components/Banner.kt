@@ -2,6 +2,7 @@ package com.example.fakestore.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -30,7 +31,7 @@ import com.example.fakestore.ui.theme.ButtonBanner
 import com.example.fakestore.ui.theme.TextColor
 
 @Composable
-fun Banner(banner: ProductModel){
+fun Banner(banner: ProductModel, onCLick: () -> Unit){
     Row(modifier = Modifier
         .fillMaxWidth()
         .padding(horizontal = 35.dp, vertical = 15.dp)
@@ -64,7 +65,8 @@ fun Banner(banner: ProductModel){
                     color = ButtonBanner)
             }
             Spacer(Modifier.weight(1f))
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            Row(modifier = Modifier.clickable(enabled = true, onClick = onCLick),
+                verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.KeyboardArrowDown,
                     "Details",
                     tint = Color.LightGray,
