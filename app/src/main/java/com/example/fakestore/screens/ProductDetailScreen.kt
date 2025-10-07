@@ -81,7 +81,7 @@ fun ProductDetailScreen(id: Int, nav: NavController) {
             .background(Background)
             .padding(16.dp)
         ) {
-            NavBar{nav.navigate(HomeScreenRoute)}
+            NavBar{nav.navigate(HomeScreenRoute())}
             Text(product?.title ?: "Error al cargar producto",
                 fontWeight = FontWeight.Bold,
                 color = TextColor,
