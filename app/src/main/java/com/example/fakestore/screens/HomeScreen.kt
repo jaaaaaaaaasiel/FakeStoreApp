@@ -51,7 +51,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 @Composable
 fun HomeScreen(nav: NavController){
     var products by remember { mutableStateOf(listOf<ProductModel>()) }
-    var banner by remember { mutableStateOf(products.random()) }
     var loading by remember { mutableStateOf(true) }
 
     LaunchedEffect(true) {
@@ -84,6 +83,7 @@ fun HomeScreen(nav: NavController){
             CircularProgressIndicator()
         }
     } else {
+        val banner = products.random()
         Column(modifier = Modifier
             .fillMaxSize()
             .background(Brush.linearGradient(listOf(Background, Color.White)))
